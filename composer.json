@@ -1,0 +1,38 @@
+{
+    "name": "anza-eve/seat-discourse-connector",
+    "description": "A SeAT plugin which maintain user access on Discourse software based on defined pattern.",
+    "type": "seat-plugin",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Anza\\Seat\\Connector\\Drivers\\Discourse\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Anza\\Seat\\Connector\\Drivers\\Discourse\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "ext-json": "*",
+        "warlof/seat-connector": "^2.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0"
+    },
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Ben Thompson",
+            "email": "ben.thompson002@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Anza\\Seat\\Connector\\Drivers\\Discourse\\DiscourseConnectorServiceProvider"
+            ]
+        }
+    }
+}
